@@ -1,0 +1,50 @@
+{
+  "name": "backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:update": "pnpm run db:generate && pnpm run db:migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "ts-node --esm src/db/seed.ts",
+    "db:setup": "pnpm run db:update && pnpm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.3",
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.14",
+    "@types/pg": "^8.15.4",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-rds-data": "^3.846.0",
+    "@aws-sdk/client-secrets-manager": "^3.846.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "drizzle-orm": "^0.44.3",
+    "drizzle-seed": "^0.3.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
