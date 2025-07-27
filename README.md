@@ -1,6 +1,7 @@
 # User weight management full-stack app
 
 A full-stack application for managing user measurements with a React frontend and Node.js backend using postgres for database.
+LIVE DEMO (Vercel + AWS RDS): [raintree-frontend.vercel.app](https://raintree-frontend.vercel.app)
 
 ## Technologies
 
